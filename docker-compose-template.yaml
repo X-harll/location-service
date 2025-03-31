@@ -1,0 +1,13 @@
+services:
+  app:
+    image: IMAGE_TAG
+    environment:
+      - DBHOST=MYSQL_CONNECTION_STRING
+      - DBUSER=DB_USER
+      - DBPASSWORD=DB_PASSWORD
+    container_name: APP_NAME
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    
+      
